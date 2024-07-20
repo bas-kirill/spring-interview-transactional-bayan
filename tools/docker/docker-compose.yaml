@@ -1,0 +1,14 @@
+version: "3.0"
+
+networks:
+  boosty:
+    driver: bridge
+
+services:
+  server:
+    image: spring-interview-tx-bayan:latest
+    container_name: spring-interview-tx-bayan
+    ports:
+      - ${SERVER_PORT}:8080
+    networks:
+      - boosty
